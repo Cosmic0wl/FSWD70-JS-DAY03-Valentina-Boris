@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style></style>
+</head>
+
+<body>
+    <button onclick="getWeather()">What weather do we have?</button>
+    <div class="pic"></div>
+    <script>
+
+    function getWeather() {
+        var degree = Math.ceil(Math.random() * (40 - 5)) - 5;
+        if (degree > -5 && degree < 10) {
+           document.getElementsByClassName('pic')[0].innerHTML= '<img class="meme"src="https://media.tenor.com/images/f37164907671cf76f47e6aedfedf4473/raw"><br>"The Weather is cold"';        } else if (degree > 20 && degree < 32) {
+            document.getElementsByClassName('pic')[0].innerHTML = '<img class="meme"src="https://memegenerator.net/img/instances/72192091.jpg"><br>"The Weather is fiineee"';
+        } else {
+            document.getElementsByClassName('pic')[0].innerHTML= '<img class="meme"src="http://fitsizedamanda.com/wp-content/uploads/2017/07/bb790940-fd2c-4d7a-82db-c0e47750e62e_500.jpg"><br>"The Weather is like a gosh diggity darn hellfire"'
+        } 
+    }
+    </script>
+</body>
+
+</html>
