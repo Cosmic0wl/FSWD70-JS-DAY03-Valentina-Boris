@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ya boi</title>
+    <link rel="stylesheet" type="text/css" href="shoes.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div>
+                <ul class="navbar">
+                    <li class="list"><a href="#" class="link">Home</a></li>
+                    <li class="list"><a href="#" class="link">Cabbage</a></li>
+                    <li class="list"><a href="#" class="link">Cabbage</a></li>
+                    <li class="list"><a href="#" class="link">Cabbage</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="banner">
+                <img src="REALcabbage.jpg" alt="">
+            </div>
+            <div class="shop">
+                <div class="row">
+                    <div class="item">
+                        <div class="image">
+                            <img src="cabbage.jpg">
+                            <p class="cabtxt"> This is a cabbage. </p>
+                        </div>
+                        <button onclick="btnAdd(this.id)" class="button">Add to Cart</button>
+                        <p class="added">Added to cart</p>
+                        <p class="removed">Removed from cart</p>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="cabbage.jpg">
+                            <p class="cabtxt"> This is also a cabbage. </p>
+                        </div>
+                        <button class="button">Add to Cart</button>
+                        <p class="added">Added to cart</p>
+                        <p class="removed">Removed from cart</p>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="cabbage.jpg">
+                            <p class="cabtxt"> Who made these descriptions? </p>
+                        </div>
+                        <button class="button">Add to Cart</button>
+                        <p class="added">Added to cart</p>
+                        <p class="removed">Removed from cart</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <div class="image">
+                            <img src="cabbage.jpg">
+                            <p class="cabtxt"> Probably some dude with too much time on his hands </p>
+                        </div>
+                        <button class="button">Add to Cart</button>
+                        <p class="added">Added to cart</p>
+                        <p class="removed">Removed from cart</p>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="cabbage.jpg">
+                            <p class="cabtxt"> I should be working on something else </p>
+                        </div>
+                        <button class="button">Add to Cart</button>
+                        <p class="added">Added to cart</p>
+                        <p class="removed">Removed from cart</p>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="cabbage.jpg">
+                            <p class="cabtxt"> Messing with the cabbage text brings me solace </p>
+                        </div>
+                        <button class="button">Add to Cart</button>
+                        <p class="added">Added to cart</p>
+                        <p class="removed">Removed from cart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="footer">
+        <img src="cabbagesalad.jpg">
+        <h4>This Salad was brought to you by</h4>
+        <p>Boris & Valentina <br>
+            A.k.a Team Bad Vöslau <br>
+            Codefactory - 2019</p>
+    </div>
+    </div>
+    <script>
+    var btn = document.getElementsByClassName("button");
+    var added = document.getElementsByClassName("added");
+    var removed = document.getElementsByClassName("removed");
+
+    for (let i = 0; i < btn.length; i++) {
+        document.getElementsByClassName("button")[i].addEventListener("click", function() { btnAdd(i) }, false);
+    }
+
+    function btnAdd(i) {
+        var hidden_1 = added[i];
+        var hidden_2 = removed[i];
+        console.log(added);
+        console.log(removed)
+        console.log(btn)
+        if (hidden_1.style.display == "none") {
+            hidden_1.style.display = "block";
+            hidden_2.style.display = "none";
+            document.getElementsByClassName("button")[i].innerHTML = "Add to Cart";
+        } else {
+            hidden_1.style.display = "none";
+            hidden_2.style.display = "block";
+            document.getElementsByClassName("button")[i].innerHTML = "Remove from Cart";
+        }
+
+    }
+    </script>
+</body>
+
+</html>
