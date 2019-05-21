@@ -67,4 +67,18 @@
 .removed {
   display: none; }
 
+/* media queries */
+@media only screen and (max-width: 780px) {
+  .banner {
+    margin-left: 7%; }
+
+  .banner > img {
+    width: 100%; }
+
+  .row {
+    flex-wrap: wrap; }
+
+  .item {
+    width: 100%; } }
+
 /*# sourceMappingURL=shoes.css.map */
