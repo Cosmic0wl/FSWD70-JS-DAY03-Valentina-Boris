@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var gradesArray = [76, 85, 65, 93, 81];
+		var total = 0;
+
+		function getAvgGrade(array) {
+			for (i=0; i < array.length; i++) {
+				total += array[i];
+			}
+			var avg = total / array.length;
+			return avg;
+		}
+
+		var classGrade = getAvgGrade(gradesArray);
+		document.write(classGrade);
+		document.write("<br/>");
+
+
+		if (classGrade < 60) {
+			document.write("You get an F");
+		} else if (classGrade >= 60 && classGrade < 70) {
+			document.write("You get a D");
+		} else if (classGrade >= 70 && classGrade < 80) {
+			document.write("You get a C");
+		} else if (classGrade >= 80 && classGrade < 90) {
+			document.write("You get a B");
+		} else {
+			document.write("You get an A");
+		}
+
+
+	</script>
+	
+</body>
+</html>
